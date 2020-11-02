@@ -29,8 +29,61 @@ code {
 #company-logo {
   width: 100%;
 }
+#search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 40vw;
+}
+#form-input-wrapper {
+  border: 1px solid lightgray;
+  display: flex;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 1;
+}
+#form-input-wrapper > input,
+#form-input-wrapper > input:focus,
+#form-input-wrapper > select,
+#form-input-wrapper > select:focus {
+  border: none;
+  outline: none;
+}
+#form-input-wrapper > input {
+  flex: 1;
+}
+#form-input-wrapper > select {
+  background-color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+#form-submit {
+  margin-top: 10px;
+  padding: 10px 30px;
+  border: 1px solid #333348;
+  background-color: #333348;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#form-submit:hover {
+  box-shadow: 0px 5px 10px #545454;
+}
 @media (max-width: 400px) {
-  #image-header {
+  #image-header,
+  #search-form {
     width: 80vw;
+  }
+}
+@media (min-width: 400px) {
+  #form-input-wrapper {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #form-submit {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 0px;
   }
 }
