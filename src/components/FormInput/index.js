@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { searchForQuery } from 'store/actions/search-actions';
 const FormInput = () => {
   const searchType = ['google', 'bing', 'both'];
-
+  const dispatch = useDispatch();
+  const { isLoading } = useSelector(state => state.search);
   const [val, setVal] = useState('');
   const [searchEngine, setSearchEngine] = useState(searchType[0]);
   const handleChange = e => {
@@ -10,9 +12,7 @@ const FormInput = () => {
   };
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('Hit me on a click event');
-    console.log(val);
-    console.log(searchEngine);
+    dispatch(searchForQuery(searchEngine, val));
   };
   const handleEnter = e => (e.keyCode == 13 ? handleSubmit(e) : null);
   const handleSearchEngine = e => {
@@ -27,7 +27,7 @@ const FormInput = () => {
       onKeyPress={handleEnter}
     >
       <div id="form-input-wrapper" data-test="form-input-wrapper">
-        <input value={val} onChange={handleChange} />
+        <input value={val} onChange={handleChange} disabled={isLoading} />
         <select onChange={handleSearchEngine}>
           {searchType.map(type => (
             <option value={type} key={type}>
@@ -36,7 +36,12 @@ const FormInput = () => {
           ))}
         </select>
       </div>
-      <button type="submit" id="form-submit" data-test="form-submit">
+      <button
+        type="submit"
+        id="form-submit"
+        data-test="form-submit"
+        disabled={isLoading}
+      >
         {'Search'}
       </button>
     </form>
