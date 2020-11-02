@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#main-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5vw 2vw 3vw 2vw;
+}
+
+#image-header {
+  width: 40vw;
+}
+#image-header > p {
+  text-align: center;
+}
+#company-logo {
+  width: 100%;
+}
+@media (max-width: 400px) {
+  #image-header {
+    width: 80vw;
+  }
+}

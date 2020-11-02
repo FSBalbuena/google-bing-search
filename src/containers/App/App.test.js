@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Component from './App';
-import { findByTestAtrr } from '/utils/test';
+import { findByTestAtrr } from 'utils/test';
 
 describe('Initializing App Component', () => {
   let wrapper;
