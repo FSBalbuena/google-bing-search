@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SubmitButton = ({ isLoading, sumbitText }) => {
+const SubmitButton = ({ isLoading, submitText }) => {
   return (
     <button
       type="submit"
@@ -9,14 +9,14 @@ const SubmitButton = ({ isLoading, sumbitText }) => {
       data-test="form-submit"
       disabled={isLoading}
     >
-      {sumbitText}
+      {submitText}
     </button>
   );
 };
 
 SubmitButton.propTypes = {
   isLoading: PropTypes.bool,
-  sumbitText: PropTypes.string,
+  submitText: PropTypes.string,
 };
 
 export default SubmitButton;

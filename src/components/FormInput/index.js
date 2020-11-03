@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { useDispatch } from 'react-redux';
-import { searchForQuery } from 'store/actions/search-actions';
+import { searchForQuery, searchTypes } from 'store/actions/search-actions';
 import SubmitButton from './components/SubmitButton';
 import InputWrapper from './components/InputWrapper';
 const FormInput = ({ isLoading }) => {
-  const searchType = ['google', 'bing', 'both'];
+  const searchType = Object.keys(searchTypes);
   const dispatch = useDispatch();
   const [val, setVal] = useState('');
   const [searchEngine, setSearchEngine] = useState(searchType[0]);
