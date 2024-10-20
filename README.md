@@ -4,6 +4,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 **Check the .env-example file** to know how to set the enviroment (is just google and bing service keys).
 
+You only need an one service to play with it. I recommend Google, because is easier to get the API key.
+
+## Google API-Key
+
+1. Go to [Google search API](https://developers.google.com/custom-search/v1/overview?hl=es-419#api_key) and click on "Get Key" button.
+2. Select a project, or create a new one, is really easy, just type a name.
+3. Copy `.env-example` file and paste it next to it (root level), and name it `.env`.
+4. Place your custom API key in `REACT_APP_GOOGLE_SEARCH_API_KEY=Th1sI5@n3xAmpL3` in your `.env` file.
+5. run `yarn install` and `yarn start`
+
 ## Available Scripts
 
 In the project directory, you can run:
