@@ -1,5 +1,9 @@
+//TODO: TS fix type for check-prop-types, testStore
+// add eslint types
+// @ts-nocheck
 import checkPropTypes from 'check-prop-types';
-
+import { GlobalStateType } from 'data/globalTypes';
+import { ReactWrapper } from 'enzyme';
 import { createStoreWithMiddlewares } from 'store';
 import allReducers from 'store/reducers';
 
@@ -8,7 +12,7 @@ import allReducers from 'store/reducers';
  * @param {enzyme-component} wrapper
  * @param {string} value
  */
-export const findByTestAtrr = (wrapper, value) =>
+export const findByTestAtrr = (wrapper: ReactWrapper, value: string) =>
   wrapper.find(`[data-test="${value}"]`);
 
 /**
@@ -16,7 +20,7 @@ export const findByTestAtrr = (wrapper, value) =>
  * @param {enzyme-component} component
  * @param {object} expectedProps
  */
-export const checkProps = (component, expectedProps) =>
+export const checkProps = (component: React.FC, expectedProps = {}) =>
   checkPropTypes(component.propTypes, expectedProps, 'props', component.name);
 
 /**
@@ -24,5 +28,6 @@ export const checkProps = (component, expectedProps) =>
  * @param {object} initialState
  * @description given an initial state, creates a store ment to be used on testing
  */
-export const testStore = initialState =>
-  createStoreWithMiddlewares(allReducers, initialState);
+export const testStore = (initialState: GlobalStateType) => {
+  return createStoreWithMiddlewares(allReducers, initialState);
+};

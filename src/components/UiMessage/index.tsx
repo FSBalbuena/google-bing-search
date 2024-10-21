@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const UiMessage = ({ text, isError }) => {
+const UiMessage = ({ text, isError }: { text: string; isError: boolean }) => {
   return (
     <p
       data-test="ui-message"

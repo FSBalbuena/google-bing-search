@@ -2,6 +2,7 @@ import {
   ON_SEARCH,
   ON_SEARCH_SUCCEDED,
   ON_SEARCH_FAILED,
+  SearchAction,
 } from 'data/actionsConstants';
 
 const initialState = {
@@ -10,7 +11,7 @@ const initialState = {
   error: null,
 };
 
-export default (state = initialState, action) => {
+export default (state = initialState, action: SearchAction) => {
   switch (action.type) {
     case ON_SEARCH:
       return { ...state, isLoading: true };
