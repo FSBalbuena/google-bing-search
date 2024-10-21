@@ -15,6 +15,6 @@ export const createStoreWithMiddlewares = applyMiddleware(...allMiddlewares)(
 );
 
 export default createStoreWithMiddlewares(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  allReducers
+  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

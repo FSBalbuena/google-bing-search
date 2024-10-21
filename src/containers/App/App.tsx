@@ -1,13 +1,19 @@
+//TODO: TS fix image type support
+// add eslint types
+// @ts-nocheck
 import React from 'react';
 import Header from 'components/Header';
 import FormInput from 'components/FormInput';
 import ResultList from 'components/ResultList';
 import UiMessage from 'components/UiMessage';
-import logo from 'assets/images/Avantica-logo.png';
+import logo from 'assets/images/app-logo.png';
 import { useSelector } from 'react-redux';
+import { GlobalStateType } from 'data/globalTypes';
 
 function App() {
-  const { isLoading, error, data } = useSelector(state => state.search);
+  const { isLoading, error, data } = useSelector(
+    (state: GlobalStateType) => state.search
+  );
 
   const headerProps = {
     logo,

@@ -1,7 +1,8 @@
 import React from 'react';
+import { SearchItemType } from 'data/globalTypes';
 import PropTypes from 'prop-types';
 
-const ResultItem = ({ title, link, snippet }) => {
+const ResultItem = ({ title, link, snippet }: SearchItemType) => {
   return (
     <article>
       <header>
@@ -14,7 +15,7 @@ const ResultItem = ({ title, link, snippet }) => {
   );
 };
 
-const ResultList = ({ results }) => {
+const ResultList = ({ results }: { results: SearchItemType[] }) => {
   return (
     <section>
       {results.map((item, idx) => (

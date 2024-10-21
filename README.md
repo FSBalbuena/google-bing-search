@@ -14,6 +14,19 @@ You only need an one service to play with it. I recommend Google, because is eas
 4. Place your custom API key in `REACT_APP_GOOGLE_SEARCH_API_KEY=Th1sI5@n3xAmpL3` in your `.env` file.
 5. run `yarn install` and `yarn start`
 
+## Update
+
+on Oct 2024 I started to update this legacy challenge app, in order to introduce more up to date tools.
+
+1. TypeScript
+   If you are wondering why typescript and not better tests?
+
+- Catch Errors sooner
+- Improve code quality
+- Auto-complete, and other editor supports.
+- Having typescript will allow me to write better code and tests in the future
+  And...Writing tests right now with this code base, to update it later, is more like an Ego call for me and not the best decision for a project. If I had a project that needed to enhance coworkers contribution fast, I would go with typescript, then tests, then new features, and that Is what I plan to do.
+
 ## Available Scripts
 
 In the project directory, you can run:

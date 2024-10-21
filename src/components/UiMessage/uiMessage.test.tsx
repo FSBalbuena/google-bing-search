@@ -1,3 +1,5 @@
+//TODO: TS re-write tests with RTL
+// @ts-nocheck
 import React from 'react';
 import { shallow } from 'enzyme';
 import Component from './';

@@ -5,7 +5,7 @@ const BING_KEY = process.env.REACT_APP_BING_SEARCH_API_KEY;
 const BASE_URL = process.env.REACT_APP_BING_SEARCH_BASE_URL;
 
 export default class BingApi {
-  searchByQuery(q) {
+  searchByQuery(q: string) {
     const params = new URLSearchParams();
     params.append('q', q);
     return axios
@@ -14,8 +14,8 @@ export default class BingApi {
           'Ocp-Apim-Subscription-Key': BING_KEY,
         },
       })
-      .then(res => res.data)
-      .then(data => parseBingItemsResult(data))
-      .catch(err => Promise.reject('Bing Api has failed'));
+      .then((res) => res.data)
+      .then((data) => parseBingItemsResult(data))
+      .catch((err) => Promise.reject('Bing Api has failed'));
   }
 }

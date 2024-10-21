@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const Header = ({ logo, slogan }) => {
+//TODO: TS fix image type support
+const Header = ({ logo, slogan }: { logo: string; slogan: string }) => {
   return (
     <header data-test="header" id="image-header">
       <img data-test="logo" src={logo} alt="Logo" id="company-logo" />
