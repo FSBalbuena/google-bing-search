@@ -37,6 +37,8 @@ on Oct 2024 I started to update this legacy challenge app, in order to introduce
 
 2. (\*) PropTypes: I will keep PropTypes around for now, later I would try to implement a babel pluging to compile my TS code to PropTypes in order to remove a package, and have less boilerplate code for a component.
 
+Helped by [this post](https://stackoverflow.com/questions/41746028/proptypes-in-a-typescript-react-application)
+
 3. Tests: Introduce RTL
 
 ## Available Scripts
