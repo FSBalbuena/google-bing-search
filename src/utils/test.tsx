@@ -1,6 +1,5 @@
 //TODO: TS fix type for check-prop-types, testStore
-// add eslint types
-// @ts-nocheck
+//@ts-ignore
 import checkPropTypes from 'check-prop-types';
 import { GlobalStateType } from 'data/globalTypes';
 import { ReactWrapper } from 'enzyme';
@@ -29,5 +28,6 @@ export const checkProps = (component: React.FC, expectedProps = {}) =>
  * @description given an initial state, creates a store ment to be used on testing
  */
 export const testStore = (initialState: GlobalStateType) => {
+  //@ts-ignore
   return createStoreWithMiddlewares(allReducers, initialState);
 };
