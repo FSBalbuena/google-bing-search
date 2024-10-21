@@ -1,10 +1,18 @@
-# Avantica Challenge
+# Simple Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal was to create a simple Search App, consuming multiple APIs. User can choose between the available services, use them individually, or coupled.
 
-**Check the .env-example file** to know how to set the enviroment (is just google and bing service keys).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) on 2020.
 
-You only need an one service to play with it. I recommend Google, because is easier to get the API key.
+It is being updated since Oct 2024 (Check Update section below)
+
+## Start
+
+1. **Check the .env-example file** to know how to set the enviroment (is just google and bing service keys).
+2. `yarn install`
+3. `yarn start`
+
+You only need an one service to play with it and check all the available features. -> I recommend Google, because is easier to get the API key.
 
 ## Google API-Key
 
@@ -17,15 +25,19 @@ You only need an one service to play with it. I recommend Google, because is eas
 ## Update
 
 on Oct 2024 I started to update this legacy challenge app, in order to introduce more up to date tools.
+(\*) -> The last working step
 
-1. TypeScript
-   If you are wondering why typescript and not better tests?
+1. TypeScript (If you are wondering why typescript first and not better tests?)
 
 - Catch Errors sooner
 - Improve code quality
 - Auto-complete, and other editor supports.
 - Having typescript will allow me to write better code and tests in the future
   And...Writing tests right now with this code base, to update it later, is more like an Ego call for me and not the best decision for a project. If I had a project that needed to enhance coworkers contribution fast, I would go with typescript, then tests, then new features, and that Is what I plan to do.
+
+2. (\*) PropTypes: I will keep PropTypes around for now, later I would try to implement a babel pluging to compile my TS code to PropTypes in order to remove a package, and have less boilerplate code for a component.
+
+3. Tests: Introduce RTL
 
 ## Available Scripts
 
