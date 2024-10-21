@@ -1,6 +1,3 @@
-//TODO: TS fix image type support
-// add eslint types
-// @ts-nocheck
 import React from 'react';
 import Header from 'components/Header';
 import FormInput from 'components/FormInput';

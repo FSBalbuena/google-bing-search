@@ -1,6 +1,4 @@
 //TODO: TS fix type for dispatch
-// add eslint types
-// @ts-nocheck
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -19,6 +17,7 @@ const FormInput = ({ isLoading }: { isLoading: boolean }) => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    //@ts-ignore
     dispatch(searchForQuery(searchEngine, val));
   };
   const handleEnter = (e: React.KeyboardEvent) =>
